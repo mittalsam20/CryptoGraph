@@ -6,7 +6,7 @@ import Header from "../components/Header";
 const CoinSummaryPage = () => {
   return (
     <>
-      <Header name={"CryptoCurrencies You Are Tracking"} />
+      <Header name={"CryptoCurrencies That You Are Tracking"} />
       <div className="coinsummary shadow border p-2 rounded mt-2 bg-light">
         <AddCoin />
         <CoinList />
