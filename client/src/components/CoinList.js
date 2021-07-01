@@ -13,7 +13,7 @@ const CoinList = () => {
       setIsLoading(true);
       const response = await coinGecko.get("/coins/markets/", {
         params: {
-          vs_currency: "usd",
+          vs_currency: "inr",
           ids: watchList.join(","),
         },
       });

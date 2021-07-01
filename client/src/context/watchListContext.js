@@ -10,6 +10,7 @@ export const WatchListContextProvider = (props) => {
       "ethereum",
       "ripple",
       "litecoin",
+      "dogecoin",
     ]
   );
 

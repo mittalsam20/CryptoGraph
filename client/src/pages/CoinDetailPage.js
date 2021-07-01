@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import HistoryChart from "../components/HistoryChart";
 import CoinData from "../components/CoinData";
 import coinGecko from "../apis/coinGecko";
+import Header from "../components/Header";
 
 const CoinDetailPage = () => {
   const { id } = useParams();
@@ -24,25 +25,25 @@ const CoinDetailPage = () => {
       const [day, week, year, detail] = await Promise.all([
         coinGecko.get(`/coins/${id}/market_chart/`, {
           params: {
-            vs_currency: "usd",
+            vs_currency: "inr",
             days: "1",
           },
         }),
         coinGecko.get(`/coins/${id}/market_chart/`, {
           params: {
-            vs_currency: "usd",
+            vs_currency: "inr",
             days: "7",
           },
         }),
         coinGecko.get(`/coins/${id}/market_chart/`, {
           params: {
-            vs_currency: "usd",
+            vs_currency: "inr",
             days: "365",
           },
         }),
         coinGecko.get("/coins/markets/", {
           params: {
-            vs_currency: "usd",
+            vs_currency: "inr",
             ids: id,
           },
         }),
@@ -63,12 +64,14 @@ const CoinDetailPage = () => {
 
   const renderData = () => {
     if (isLoading) {
-      return <div>Loading....</div>;
+      return <div> Loading.... </div>;
     }
     return (
-      <div className="coinlist">
-        <HistoryChart data={coinData} />
-        <CoinData data={coinData.detail} />
+      <div>
+        <Header name={id.toUpperCase()} />
+        <div className="coinlist">
+          <HistoryChart data={coinData} /> <CoinData data={coinData.detail} />{" "}
+        </div>
       </div>
     );
   };
