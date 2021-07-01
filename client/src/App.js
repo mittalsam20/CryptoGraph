@@ -12,6 +12,7 @@ function App() {
         <WatchList>
           <BrowserRouter>
             <Header />
+            <Route exact path="/coindetail/:id" component={Detail} />
             <Route exact path="/" component={Summary} />
           </BrowserRouter>
         </WatchList>

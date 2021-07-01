@@ -21,7 +21,11 @@ const CoinList = () => {
       console.log(res.data);
       setLoading(false);
     };
-    fetchdata();
+
+    if (wl.length > 0) fetchdata();
+    else {
+      setCoins([]);
+    }
   }, [wl]);
 
   const renderCoins = () => {
