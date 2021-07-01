@@ -1,41 +1,41 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
 }
 
 body {
-    background-color: #263238;
+  background-color: #263238;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .coinlist-image {
-    width: 50px;
+  width: 50px;
 }
 
 .coinlist-item {
-    display: flex;
+  display: flex;
 }
 
 .coinsummary {
-    border-color: white !important;
-    border-style: outset !important;
+  border-color: white !important;
+  border-style: outset !important;
 }
 
 .coin-data-category {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .delete-icon {
-    display: none;
-    position: absolute;
-    right: 6px;
+  display: none;
+  position: absolute;
+  right: 6px;
 }
 
 .coin:hover .delete-icon {
-    display: block;
+  display: block;
 }
