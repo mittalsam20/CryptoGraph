@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Summary from "./pages/summary";
 import Detail from "./pages/detail";
 import Header from "./comp/header";
